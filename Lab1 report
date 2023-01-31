@@ -1,0 +1,161 @@
+\documentclass[nobib]{MSword}
+% Class options:
+%-------------------------------
+% nobib         - skip bibliography code/ don't include bib
+% math          - include math packages and useful math commands
+% hidelinks     - hide hyperref colored link boxes
+% wordlinks     - link color scheme similar to word
+
+
+% Preamble code:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{lipsum}
+
+% % Uncomment using "Ctrl + /" (/ on numpad):
+% % Customizing headers and footers:
+% \fancypagestyle{custom}{%
+%     \fancyhf{}% clears the footer and header
+%     % Header:
+%     \fancyhead[L]{}
+%     \fancyhead[C]{}
+%     \fancyhead[R]{}
+%     % Footer:
+%     \fancyfoot[L]{}
+%     \fancyfoot[C]{}
+%     \fancyfoot[R]{}
+%         % Tips:
+%         % ----
+%         % L: left, C: center, R: right
+%         % O: odd pages, E: even pages
+%         % ----
+%         % Example: \fancyghead[LO,RE]{Text}
+%         % will produce "Text" left in the header
+%         % on odd pages and right in the header on even pages.
+%     % Rules/ lines:
+%     \renewcommand{\headrulewidth}{0.4pt}
+%     \renewcommand{\footrulewidth}{2pt}
+% }
+% % Changing the pagestyle:
+% \pagestyle{custom}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Preamble information:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Lab 2 Userdefined Functions}
+\author{Dre Mata}
+\date{30 January 2023}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The document:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\begin{center}
+    Part 1:
+\end{center}
+ The objective of part one was to make a simple user defined function. This was accomplished by importing numpy and matplotlib.plot.the numpy package allows for functions like cosine and sine to be used. A Cosine graph was then made for the Task 2.
+
+
+
+\begin{center}
+    Part 2:
+\end{center}
+The objective of part 2 was to make a function to match the plot seen in Figure one. This was done by first writing coming up with the function seen in Math one. The next step was to graph a step and ramp function in python. The Final step was to graph the function seen in Math one in python. 
+
+
+\begin{center}
+    Part 3:
+\end{center}
+The objective of part 3 was to manipulate the function from part two using time shifing and scaling operations. This was done by ploting the derivative plot seen in Figure 2. The next part was to add a time reversal to the function in math one and plot it. This can be seen in the Github Lab2Part3-6.3.0 code. After this was done time shift operations of f(t - 4) and f(-t - 4) were applied to our function. This code can also be seen in Lab2Part3-6.3.0 code. Next a time scale operation of f(t / 2) and f(2t) were applied to the function and then plotted. This can be seen in Lab2Part3-6.3.1 in Github. the final step was to then plot the deriviative of our function using the numpy.diff() function. This can be seen in the Lab2Part3-6.3.1 code in Github.
+
+\begin{center}
+    Questions:
+\end{center}
+1. Are the plots from Part 3 Task 4 and Part 3 Task 5 identical? Is it possible for them to match? Explain why or why not. 
+
+The plots are similar, but not identical. I believe this is because I may have implemented numpy.diff() incorrectly in my code. They look the same, but python is graphing the 1 and -1 slope as spikes rather than constant slopes. 
+
+
+2.How does the correlation between the two plots (from Part 3 Task 4 and Part 3 Task 5) change if you were to change the step size within the time varaible in Task 5? Explain why this happens.
+
+The correlation between the two plots actually gets better when the step size is decreased. I believe this happens, because the spikes that python was plotting in the numpy.diff() function had worse resolution; making those spikes less spiky and more flat. 
+
+3. Leave any feedback on the clarity of lab tasks, expectations, and deliverable. 
+
+Lab seemed pretty straight forward in what it wanted.
+
+\begin{center}
+    Figures
+\end{center}
+
+Figure 1:
+
+\includegraphics{txt/Fig1Lab1.png}
+
+Figure 2:
+
+\includegraphics[scale = 0.75]{txt/Fig2Lab2.png}
+
+\begin{center}
+    Math
+\end{center}
+
+Math 1:
+$r(t) - r(t - 3) + 5 * u(t - 3) - 2 * u(t - 6) - 2 * r(t - 6)$
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Copyright Remarks:
+%--------------------
+
+% Copyright holder: Vebjørn S. Førde, copyright: CC BY 4.0
+% Note: The author of this template is also the copyright holder.
+
+% Below is an explanation of the CC BY 4.0. Additional statements/ 
+% clarifications made by the author/copyright holder are marked with *.
+
+% YOU ARE FREE TO:
+% Share — copy and redistribute the material in any medium or format
+% Adapt — remix, transform, and build upon the material
+% for any purpose, even commercially.
+
+% UNDER THE FOLLOWING TERMS:
+% Attribution* — You must give appropriate credit, provide a link to the license,
+% and indicate if changes were made. You may do so in any reasonable manner, but 
+% not in any way that suggests the licensor endorses you or your use.
+
+% *Note: 
+% Attribution NOT NEEDED for: 
+%       - PDF distibution (like sharing your PDF document)
+%       - Use of (dummy)text and images provided in the template (obviously)
+%       - Distributing parts of the template, and not the template as a whole
+% I am not really concerned with being given credit. As long as you do not 
+% claim to have made the template yourself in distributing it further, I have
+% no complaints.
+
+% No additional restrictions — You may not apply legal terms or technological 
+% measures that legally restrict others from doing anything the license permits.
+
+% NOTICES:
+% No warranties are given.
+
+% Disclaimer* (added by copyright holder):
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+% Read more about CC BY 4.0:
+% https://creativecommons.org/licenses/by/4.0/
