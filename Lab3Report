@@ -1,0 +1,184 @@
+\documentclass[nobib]{MSword}
+% Class options:
+%-------------------------------
+% nobib         - skip bibliography code/ don't include bib
+% math          - include math packages and useful math commands
+% hidelinks     - hide hyperref colored link boxes
+% wordlinks     - link color scheme similar to word
+
+
+% Preamble code:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{lipsum}
+
+% % Uncomment using "Ctrl + /" (/ on numpad):
+% % Customizing headers and footers:
+% \fancypagestyle{custom}{%
+%     \fancyhf{}% clears the footer and header
+%     % Header:
+%     \fancyhead[L]{}
+%     \fancyhead[C]{}
+%     \fancyhead[R]{}
+%     % Footer:
+%     \fancyfoot[L]{}
+%     \fancyfoot[C]{}
+%     \fancyfoot[R]{}
+%         % Tips:
+%         % ----
+%         % L: left, C: center, R: right
+%         % O: odd pages, E: even pages
+%         % ----
+%         % Example: \fancyghead[LO,RE]{Text}
+%         % will produce "Text" left in the header
+%         % on odd pages and right in the header on even pages.
+%     % Rules/ lines:
+%     \renewcommand{\headrulewidth}{0.4pt}
+%     \renewcommand{\footrulewidth}{2pt}
+% }
+% % Changing the pagestyle:
+% \pagestyle{custom}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Preamble information:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Lab 3 Discrete Convolution}
+\author{Dre Mata}
+\date{6 Feburary 2023}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The document:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\begin{center}
+    Part 1:
+\end{center}
+ The objective of part one was to use the ramp and step functions from the previous lab to create functions that could be used in the rest of the lab. This was accomplished defining the three functions seen in Formula one, two, and three. The next part of this was to plot the functions with a range of [0,20]. This can be seen in Figure one. 
+
+
+
+\begin{center}
+    Part 2:
+\end{center}
+The objective of part 2 was to code a function that could convole two other functions. This was done by creating a function that used arrays to convolve two functions. The code for task one can be seen in the part 2 task 1 section on Github. The next step for this part was to plot the convolution of f1 and f2. This can be seen in Figure two. After this was done the convolution of f2 and f3 was taken. This can be seen in Figure three. Finally the convolution of f1 and f3 were taken. This can be seen in figure four.
+
+
+\begin{center}
+    Questions:
+\end{center}
+1. Did you work alone or with a classmate on this lab? If you collaborated to get the solution what did that process look like?
+
+I worked alone on this lab, however I did ask one of my friends that is more proficent at coding than myself to help explain array's to me better. He was able to explain two key points about them that helped me greatly. The first being that array is defined in the format as (name, information). The information part of this can be an integer that preforms basic arithmetic to help get array's to be the same length. The other key point was that arrays can have mathematical operations done directly to them.
+
+
+2. What was the most difficult part of this lab for you, and what did your problem-solving process look like?
+
+The most difficult part of this lab was how to wrap my head around how to use the array's in my Conv function to complete task one. The problem solving process I went with was to have my friend explain some basic programming fundamentals to me. This was addressed in question one.
+
+3. Did you approach writing the code with analytical or graphical convolution in mind? why did you chose this approach? 
+
+I went through this with an analytical approach. This was because I was not too confident with convolutions until our TA helped explain them with an analytical expression using lighting matches as an example. 
+
+4. Leave any feedback on the clarity of lab tasks, expectations, and deliverables.
+
+The lab was straight foward and I have no feedback to leave.
+
+
+\begin{center}
+    Figures
+\end{center}
+
+Figure 1:
+
+\includegraphics[scale = 0.75]
+{txt/Lab3Fig1.png}
+
+Figure 2:
+
+\includegraphics[scale = 0.75]
+{txt/Lab3Fig2.png}
+
+Figure 3:
+
+\includegraphics[scale = 0.75]
+{txt/Lab3Fig3.png}
+
+Figure 4:
+
+\includegraphics[scale = 0.75]
+{txt/Lab3Fig4.png}
+
+
+\begin{center}
+    Math
+\end{center}
+
+Formula One:
+$f1(t) = u(t - 2) - u(t - 9)$
+
+Formula Two:
+$f2(t) = exp(-t)u(t)$
+
+Formula Three:
+$f3(t) = r(t - 2)[u(t - 2) - u(t - 3)] + r(4 - t)[u(t - 3) - u(t - 4)]$
+
+\begin{center}
+    Conclusion
+\end{center}
+This lab helped me gain a better understand on what a convolution is and in some basic fundamentals of programming. The example that was given by our TA for matches being lit and how to represent it with a convolution help me understand them better. To further this understanding coding a function to do the convolutions help me seen graphically how to convolutions come out. Also I gained a better understanding of array's and how they are used in mathematical expressions in python.
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Copyright Remarks:
+%--------------------
+
+% Copyright holder: Vebjørn S. Førde, copyright: CC BY 4.0
+% Note: The author of this template is also the copyright holder.
+
+% Below is an explanation of the CC BY 4.0. Additional statements/ 
+% clarifications made by the author/copyright holder are marked with *.
+
+% YOU ARE FREE TO:
+% Share — copy and redistribute the material in any medium or format
+% Adapt — remix, transform, and build upon the material
+% for any purpose, even commercially.
+
+% UNDER THE FOLLOWING TERMS:
+% Attribution* — You must give appropriate credit, provide a link to the license,
+% and indicate if changes were made. You may do so in any reasonable manner, but 
+% not in any way that suggests the licensor endorses you or your use.
+
+% *Note: 
+% Attribution NOT NEEDED for: 
+%       - PDF distibution (like sharing your PDF document)
+%       - Use of (dummy)text and images provided in the template (obviously)
+%       - Distributing parts of the template, and not the template as a whole
+% I am not really concerned with being given credit. As long as you do not 
+% claim to have made the template yourself in distributing it further, I have
+% no complaints.
+
+% No additional restrictions — You may not apply legal terms or technological 
+% measures that legally restrict others from doing anything the license permits.
+
+% NOTICES:
+% No warranties are given.
+
+% Disclaimer* (added by copyright holder):
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+% Read more about CC BY 4.0:
+% https://creativecommons.org/licenses/by/4.0/
